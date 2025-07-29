@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Yj-AI-LAB</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <style>
+    /* 
+    css 선택기: 태그명, ID명, 클래스명, 속성등으로 요소를 선택이 가능
+    태그 선택: 태그이름 직접 사용
+    id 요소 선택 : # 아이디 값
+    class 요소 선택 : . 클래스 값
+    속성 선택: [속성명=값] 형태로 사용
+    예시:
+    body { background-color: lightblue; }  // 태그 선택
+    h3 {
+        color: green; 
+        background-color: lightyellow;
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+        }  // 태그 선택
+
+    인라인 > 인터널 > 익스터널 순으로 우선순위가 높음
+        인라인 스타일은 HTML 요소에 직접 적용되는 스타일로, 가장 높은 우선순위를 가집니다.
+        인터널 스타일은 HTML 문서 내의 <style> 태그 안에 정의된 스타일로, 인라인 스타일 다음으로 우선순위가 높습니다.
+        익스터널 스타일은 외부 CSS 파일에서 정의된 스타일로, 가장 낮은 우선순위를 가집니다.
+        따라서, 인라인 스타일이 인터널 스타일이나 익스터널 스타일보다 우선적으로 적용됩니다.
+    복합적 선택 > 단순 선택
+        */
+    
+    h3 {
+      color: green; 
+      background-color: lightyellow;
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    nav>ul>li{
+         border: 1px dashed red;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h3>디지털 대 전환시대의 아이콘</h3>
+    <h1 style="color: brown">고용재의 AI 연구소</h1>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav>
+        <p>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>   
+        </p>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+    <section>
+      <h2>Services</h2>
+      <ul>
+        <li>Web Design</li>
+        <li>Front-end Development</li>
+        <li>Graphic Design</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
