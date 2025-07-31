@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title-a">Hello, World!</h1>
+
+    <script>
+        /*
+        여러 줄 
+        주석입니다.
+        */
+        // console.dir(document);
+        
+        // var, let, const로 선언
+        var h1tag = document.getElementById("title-a");
+        // title-a라는 id를 가진 태그의 DOM 객체를 h1tag에 참조시킨다.
+        // DOM으로 바뀌지 않으면 h1태그는 문서상의 글자일 뿐이다. 
+        // document.getElementById("title-a").innerHTML = "안녕자바!";
+        h1tag.innerHTML = "안녕, 자바!";
+
+
+        console.dir(h1tag);
+        // 스스로 JS이용해서 h1태그의 내용 변경.
+        console.dir(document)
+        document.bgColor= "lightblue";
+        document.title = "Hello, JavaScript!";
+        /* 
+        console.dir(window);
+        setter 역할
+        h1tag.innerHTML = "안녕, 자바!1";
+        h1tag.innerText = "안녕, 자바!2";
+        h1tag.textContent = "안녕, 자바!3";
+        h1tag.outerHTML = "안녕, 자바!4";
+        h1tag.outerText = "안녕, 자바!5";
+        
+        
+
+
+    </script>
+</body>
+</html>
