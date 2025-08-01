@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수 선언시 function 키워드사용
+        function myFunction(self) {
+            //호출시 this(Dom객체)가 self 매개 변수에 담긴다. 
+            console.log("myFunction 호출", self);
+            console.dir(self.dataset.value1)
+            document.bgColor = "yellow";
+        }
+    </script>
+</head>
+<body>
+    <h1>자바스크립트 이벤트 핸들러</h1>
+    <button onclick="alert('클릭했습니다')">alert창 보이기</button><br>
+    <button data-value1="aaa" onclick="myFunction(this)">자바스크립트 함수 호출</button>
+</body>
+</html>

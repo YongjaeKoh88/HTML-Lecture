@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script태그 또는 style 태그는 head 태그 내부에 두는 경우가 많다.  -->
+    <script>
+        //HTMLcollection 을 array로 변경하기 
+        //THMLcollection에 비해 Array 에 더 많은 함수가 있다. 
+        window.onload = function() {
+            //리스트 형식이긴 하지만 Array타입이 아닌 HTMLcollection 타입.
+            var specialElements = document.getElementsByClassName("special");
+            console.dir(specialElements);
+
+            //ES5 이전에 사용방식
+            var array = Array.prototype.slice.call(specialElements);
+            console.dir(array);
+
+            //ES6 방식(ECMA script 2015 이후에 나온JS 최신버전)
+            //array.from()함수의 역할이 toArray함수이다. 
+            var array2 = Array.from(specialElements);
+
+            //구조분해 할당 방식
+            var array3 =[...specialElements];
+
+        };
+
+
+    </script>
+</head>
+<body>
+    <h1>DOM 연습</h1>
+    <div>
+        <ul id="topmenu">
+            <li><a href="a">AA</a></li>
+            <li class="special"><a href="b">BB</a></li>
+            <li><a href="c">CC</a></li>
+            <li class="special"><a href="d">DD</a></li>
+            <li class="special"><a href="e">EE</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>오신것을 환영합니다!</h2>
+    </div>
+    <script>
+        // 인터프리터의 특징: 위에서 아래로 순서대로 읽는다. 
+        var topMenu = document.getElementById("topmenu");
+        // console.dir(topMenu);
+    </script>
+</body>
+</html>

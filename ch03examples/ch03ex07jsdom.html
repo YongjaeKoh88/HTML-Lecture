@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script태그 또는 style 태그는 head 태그 내부에 두는 경우가 많다.  -->
+    <script>
+        //이벤트 핸들러를 이용해서 문서의 모든 내용을 읽은후 실행
+        //javascript on으로 시작되는 속성들은 거의 모두 이벤트 핸들러 속성이다. 
+        window.onload = function() {
+            //문서가 끝까지 읽어지면 실행 
+            var topMenu = document.getElementById("topmenu");
+            // console.dir(topMenu);
+        // 터프리터의 특징: 위에서 아래로 순서대로 읽는다. 
+        var specialTag = document.getElementsByClassName("special");
+        // HTMLCollencton 타입(list, Array)
+        // 구조분해 역할
+        var [lis1, lis2, lis3] = specialTag;
+        // // console.dir(lis1, lis2, lis3);
+        // lis1.getElementsByTagName("a")[0].style.color="orange";
+        // lis1.getElementsByTagName("a")[0].style.backgroundColor="red";
+
+        //for문 활용
+        var listArray = [];
+        for(var i = 0; i<specialTag.length; i++) {
+            listArray.push(specilTag[i]);
+            specialTag[i].style.color ="red"
+        }
+    };
+
+
+    </script>
+</head>
+<body>
+    <h1>DOM 연습</h1>
+    <div>
+        <ul id="topmenu">
+            <li><a href="a">AA</a></li>
+            <li class="special"><a href="b">BB</a></li>
+            <li><a href="c">CC</a></li>
+            <li class="special"><a href="d">DD</a></li>
+            <li class="special"><a href="e">EE</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>오신것을 환영합니다!</h2>
+    </div>
+    <script>
+        // 인터프리터의 특징: 위에서 아래로 순서대로 읽는다. 
+        var topMenu = document.getElementById("topmenu");
+        // console.dir(topMenu);
+    </script>
+</body>
+</html>
